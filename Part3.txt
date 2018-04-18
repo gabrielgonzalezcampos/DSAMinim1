@@ -1,0 +1,5 @@
+Tabla de Institutos
+Tabla de Alumnos
+Tabla de Operaciones
+ManyToMany Institutos-Alumnos
+ManyToMany Operaciones-Alumnos
