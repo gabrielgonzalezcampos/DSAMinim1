@@ -1,0 +1,185 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DSA",
+		"_postman_id": "f9cc8f74-39ba-44e8-b4b6-30874518c4ab",
+		"description": "Coleccion para el minimo 1 de DSA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addInstituto",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/myapp/service/addinstituto?nomInstitut=Calamot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myapp",
+						"service",
+						"addinstituto"
+					],
+					"query": [
+						{
+							"key": "nomInstitut",
+							"value": "Calamot",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Json addAlumno",
+			"request": {
+				"url": "http://localhost:8080/myapp/service/addalumno",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nomAlumno\":\"Gabri\",\n\t\"nomInstituto\":\"Calamot\",\n\t\"operacions\":[]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HacerOperacion",
+			"request": {
+				"url": "http://localhost:8080/myapp/service/hacerOperacion",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"operacion\":\"2 3 + 7 * 5 -\",\n\t\"nomInstitut\":\"Calamot\",\n\t\"nomAlumne\":\"Albert\",\n\t\"resultat\":3\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "operacionesInstituto",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/myapp/servic/operacionesInstituto?nomInstitut=Brugues",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myapp",
+						"servic",
+						"operacionesInstituto"
+					],
+					"query": [
+						{
+							"key": "nomInstitut",
+							"value": "Brugues",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/plain",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Gabri"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "operacionesAlumno",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/myapp/servic/operacionesAlumno?nomAlumno=Sara",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myapp",
+						"servic",
+						"operacionesAlumno"
+					],
+					"query": [
+						{
+							"key": "nomAlumno",
+							"value": "Sara",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/plain",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Gabri"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "listaInstitutos",
+			"request": {
+				"url": "http://localhost:8080/myapp/servic/listaInstitutos",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/plain",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Gabri"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
